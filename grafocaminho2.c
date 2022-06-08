@@ -10,29 +10,29 @@ void main(void){
  setlocale(LC_ALL,"Portuguese");
  inicializarMatriz();
  printf(" \t\t Preenchendo a Matriz:");
-//primeiro vértice
+//primeiro vÃ©rtice
  matriz [0][1] = 1;
  matriz [0][3] = 1;
-//segundo vértice
+//segundo vÃ©rtice
  matriz [1][0] = 1;
  matriz [1][2] = 1;
-//terceiro vértice
+//terceiro vÃ©rtice
  matriz [2][1] = 1;
  matriz [2][6] = 1;
-//quarto vértice
+//quarto vÃ©rtice
  matriz [3][0] = 1;
  matriz [3][4] = 1;
-//quinto vértice
+//quinto vÃ©rtice
  matriz [4][3] = 1;
  matriz [4][5] = 1;
-//sexto vértice
+//sexto vÃ©rtice
  matriz [5][4] = 1;
-//sétimo vértice
+//sÃ©timo vÃ©rtice
  matriz [6][2] = 1;
  imprimirMatriz();
- printf("\n\n \t\t Digite o vértice de partida: ");
+ printf("\n\n \t\t Digite o vÃ©rtice de partida: ");
  scanf("%d", &partida);
- printf(" \t\t Digite o vértice de chegada: ");
+ printf(" \t\t Digite o vÃ©rtice de chegada: ");
  scanf("%d", &chegada);
  printf("\n\n===========================CAMINHO============================\n");
  caminhos(partida - 1, chegada - 1);
