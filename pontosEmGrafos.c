@@ -29,7 +29,7 @@ struct listaAresta{
 	float peso;
 }aresta[MAX];
 
-//Popula o gr·fico de arestas
+//Popula o gr√°fico de arestas
 void inicializar(){
 	
 	aresta[0].verticeOrigem = 1;
@@ -62,31 +62,31 @@ void inicializar(){
 	
 }
 
-// Popula a matriz com os valores das conexıes entre os vertices
+// Popula a matriz com os valores das conex√µes entre os vertices
 void popular(){
   
-  //vertÌce 1
+  //vert√≠ce 1
   matriz[0][3] = 4;
   matriz[0][1] = 2;
     
-  //vertÌce 2
+  //vert√≠ce 2
   matriz[1][0] = 1;
   matriz[1][5] = 6;
   
-  //vertÌce 3
+  //vert√≠ce 3
   matriz[2][5] = 6;
   matriz[2][4] = 5;
   
   
-  //vertÌce 4
+  //vert√≠ce 4
   matriz[3][5] = 6;
   matriz[3][0] = 1;
   
-  //vertÌce 5
+  //vert√≠ce 5
   matriz[4][5] = 6;
   matriz[4][2] = 3;
 
-  //vertÌce 6
+  //vert√≠ce 6
   matriz[5][3] = 4;
   matriz[5][1] = 2;
   matriz[5][2] = 3;
@@ -109,7 +109,7 @@ void voltarCaminho(){
 // Imprime o caminho sendo pesquisado atualmente
 void MostrarCaminho(int c[]){
   int x =0;
-  if(c[x] == 0){printf("N„o h· caminho a ser mostrado.");}
+  if(c[x] == 0){printf("N√£o h√° caminho a ser mostrado.");}
   else{
    
     x ++;
@@ -151,7 +151,7 @@ int encontrarCaminho(int vOrigem, int vDestino, int caminho[]){
       if(vDestino != vOrigem){
         
         //printf("\nCaminho alterado, ");
-        // printf("%d foi adicionado ao caminho que agora È ", vOrigem+1);
+        // printf("%d foi adicionado ao caminho que agora √© ", vOrigem+1);
         // MostrarCaminho(caminho);
         // printf(".");
       }
@@ -159,7 +159,7 @@ int encontrarCaminho(int vOrigem, int vDestino, int caminho[]){
     }
   }
 
-  // Confere se o numero atualmente sendo analisado È o desejado
+  // Confere se o numero atualmente sendo analisado √© o desejado
   for(x = 0; x<100; x++){
     
     if(vDestino+1 == caminho[x]){
@@ -187,7 +187,7 @@ int encontrarCaminho(int vOrigem, int vDestino, int caminho[]){
       }
     }
     
-    // Testa a fileira do vertice em ques„o, se n„o È um zero e n„o estiver no caminho passado, toma como alvo
+    // Testa a fileira do vertice em ques√£o, se n√£o √© um zero e n√£o estiver no caminho passado, toma como alvo
     if(matriz[vOrigem][i] != 0 && estaNoCaminho == 0){
       //printf("\nAchou um novo vertice, o %d", grafo[vOrigem][i]);
       if(encontrarCaminho(matriz[vOrigem][i],vDestino+1,caminho) == 1){
@@ -224,7 +224,7 @@ void acharPontes(){
   }
   for(j = 0; j < MAX; j++){
     if(aresta[j].peso == 100){
-      printf("A aresta N %d do vertice %d ao %d È uma ponte\n", j+1, aresta[j].verticeOrigem, aresta[j].verticeDestino );
+      printf("A aresta N %d do vertice %d ao %d √© uma ponte\n", j+1, aresta[j].verticeOrigem, aresta[j].verticeDestino );
     }
   }
 }
